@@ -1,9 +1,12 @@
 ﻿<%@ Page Title="Home Page" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.vb" Inherits="AgricultreAuction._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+   <div class="row">
+       <h1>Welcome To Agriculture Auction</h1>
+   </div>
     <div class="row">
         <div class="col-md-8">
-            Image
+            <img src="Content\images\home_equip.jpg" alt="agri" height="400" width="400">
         </div>
         <div class="col-md-4">
             <div class="form-group row">
