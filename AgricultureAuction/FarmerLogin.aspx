@@ -1,9 +1,12 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="FarmerLogin.aspx.vb" Inherits="AgricultreAuction.FarmerLogin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="row">
+    <div class="row" id="pagetitle">
+       <h1>Welcome To Farmer Login Page</h1>
+   </div>
+    <div class="row" >
         <div class="col-md-8">
-            Image
+            <img src="Content\images\farmer_img.jpg" alt="Farmer" height="400" width="400">
         </div>
         <div class="col-md-4">
             <div class="form-group row">
