@@ -1,0 +1,7 @@
+﻿ul.nav.navbar-nav {
+    float: right;
+    margin-right: 50px;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff !important;
+}

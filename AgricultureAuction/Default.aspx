@@ -6,7 +6,7 @@
    </div>
     <div class="row">
         <div class="col-md-8">
-            <img src="Content\images\home_equip.jpg" alt="agri" height="400" width="400">
+            <img src="Content\images\home_equip.jpg" alt="agri" height="400" width="600">
         </div>
         <div class="col-md-4">
             <div class="form-group row">
@@ -33,6 +33,11 @@
             <div class="form-group row">
                 <div class="col-md-8">
                     <asp:Button ID="btnSignUp" class="btn btn-primary btn-block info" runat="server" Text="Sign In" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-8">
+                    <a href="FarmerLogin.aspx">Farmer Login</a> :: <a href="MerchantLogin.aspx">Merchant Login</a> 
                 </div>
             </div>
         </div>
