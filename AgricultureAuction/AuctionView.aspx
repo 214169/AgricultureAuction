@@ -13,7 +13,7 @@
                     <asp:BoundField DataField="Auc_no" HeaderText="Auc_no" ReadOnly="True" SortExpression="Auc_no" />
                     <asp:BoundField DataField="pro_on_sale_no" HeaderText="pro_on_sale_no" SortExpression="pro_on_sale_no" />
                     <asp:BoundField DataField="Pro_name" HeaderText="Pro_name" SortExpression="Pro_name" />
-                    <asp:BoundField DataField="Prize" HeaderText="Prize" SortExpression="Prize" />
+                    <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
                     <asp:BoundField DataField="St_date" HeaderText="St_date" SortExpression="St_date" />
                     <asp:BoundField DataField="Ed_Date" HeaderText="Ed_Date" SortExpression="Ed_Date" />
                     <asp:BoundField DataField="Condition" HeaderText="Condition" SortExpression="Condition" />
@@ -37,17 +37,17 @@
                 <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
                 <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center"  />
                 <Fields>
-                    <asp:BoundField DataField="Bide_No" HeaderText="Bide_No" SortExpression="Bide_No" />
+                    <asp:BoundField DataField="Bid_No" HeaderText="Bid No" SortExpression="Bid_No" />
                     <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
-                    <asp:BoundField DataField="Bid_Rate" HeaderText="Bid_Rate" SortExpression="Bid_Rate" />
-                    <asp:BoundField DataField="Merchant_ID" HeaderText="Merchant_ID" SortExpression="Merchant_ID" />
+                    <asp:BoundField DataField="Bid_Rate" HeaderText="Bid Rate" SortExpression="Bid_Rate" />
+                    <asp:BoundField DataField="Merchant_ID" HeaderText="Merchant ID" SortExpression="Merchant_ID" />
                     <asp:BoundField DataField="Place" HeaderText="Place" SortExpression="Place" />
                 </Fields>
                 <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
                 <AlternatingRowStyle BackColor="#DCDCDC" />
             </asp:DetailsView>
             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
-                SelectCommand="SELECT [Bide_No], [Date], [Bid_Rate], [Merchant_ID], [Place] FROM [Auction_Detail] WHERE ([Auc_No] = @Auc_No)">
+                SelectCommand="SELECT [Bid_No], [Date], [Bid_Rate], [Merchant_ID], [Place] FROM [Auction_Detail] WHERE ([Auc_No] = @Auc_No)">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="GridView1" Name="Auc_No" PropertyName="SelectedValue"
                         Type="String" />
