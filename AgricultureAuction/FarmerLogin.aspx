@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="FarmerLogin.aspx.vb" Inherits="AgricultreAuction.FarmerLogin" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="FarmerLogin.aspx.vb" 
+    Inherits="AgricultreAuction.FarmerLogin" MaintainScrollPositionOnPostback="true"%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row" id="pagetitle">
