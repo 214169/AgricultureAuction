@@ -8,23 +8,27 @@ Public Class MerchantLogin
     End Sub
 
     Protected Sub btnMerchantLogin_Click(sender As Object, e As EventArgs) Handles btnMerchantLogin.Click
-        Dim cmd As New SqlCommand("Select password from merchantmst where merchantid=@merchantid", CommonProperty.cn)
+        Dim cmd As New SqlCommand("Select password, merchantname from merchantmst where merchantid=@merchantid", CommonProperty.cn)
 
         cmd.Parameters.AddWithValue("@merchantid", txtMID.Text)
         Try
             CommonProperty.cn.Open()
-            Dim obj As Object = cmd.ExecuteScalar()
-            If obj Is Nothing Then
-                LblErrMsg.Visible = True
-                LblErrMsg.Text = "Merchantname is wrong "
-            Else
-                If obj.ToString() = txtPWD.Text Then
+            Dim da As SqlDataReader
+            da = cmd.ExecuteReader()
+
+            If da.HasRows Then
+                da.Read()
+                If da(0) = txtPWD.Text Then
                     Session("mid") = txtMID.Text
-                    Response.Redirect("AuctionDetail.aspx")
+                    Session("username") = da(1)
+                    Response.Redirect("AuctionDetail.aspx", False)
                 Else
                     LblErrMsg.Visible = True
-                    LblErrMsg.Text = "Password is wrong!!!"
+                    LblErrMsg.Text = "Invalid Credentials!"
                 End If
+            Else
+                LblErrMsg.Visible = True
+                LblErrMsg.Text = "Invalid Credentials!"
             End If
             CommonProperty.cn.Close()
         Catch ex As Exception

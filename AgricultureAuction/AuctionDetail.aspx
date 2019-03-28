@@ -120,9 +120,9 @@
                 </div>
             </div>
             <div class="alert alert-success" role="alert" id="alert">
-                <label id="insertSuccess" visible="false" runat="server">Data Successully Inserted.</label>
-                <label id="updateSuccess" visible="false" runat="server">Data Successully Updated.</label>
-                <label id="deleteSuccess" visible="false" runat="server">Data Successully Updated.</label>
+                <label id="insertSuccess" visible="false" runat="server">Data Successfully Inserted.</label>
+                <label id="updateSuccess" visible="false" runat="server">Data Successfully Updated.</label>
+                <label id="deleteSuccess" visible="false" runat="server">Data Successfully Updated.</label>
                 <label id="searchMessage" visible="false" runat="server">Data not found!</label>
                 <label id="errorMessage" visible="false" runat="server">Operation Failed.</label>
             </div>     

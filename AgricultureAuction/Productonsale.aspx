@@ -1,73 +1,54 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="FarmerSignup.aspx.vb" 
-    Inherits="AgricultreAuction.FarmerSignup" MaintainScrollPositionOnPostBack = "true" %>
-
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Productonsale.aspx.vb"
+    Inherits="AgricultreAuction.Productonsale"  MaintainScrollPositionOnPostback="true"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="row" id="pagetitle">
-        <h1>Welcome To Farmer SignUp Page</h1>
+     <div class="row" id="pagetitle">
+        <h1>Product On Sale</h1>
     </div>
     <div class="row">       
         <div class="col-md-12">
             <div class="form-group row">
                 <div class="col-md-4">
-                    <label class="control-label" for="txtFID">Farmer ID</label>
+                    <label class="control-label" for="txtProOnSaleNo">Product No</label>
                 </div>
                 <div class="col-md-4">
-                    <asp:TextBox ID="txtFID" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtProOnSaleNo" runat="server" class="form-control"></asp:TextBox>
                 </div>
                 <div class="col-md-4">
-                    <asp:Button ID="btnGetNem" runat="server" Text="Genrate Farmer ID#" formnovalidate class="btn btn-primary btn-block info" />
+                    <asp:Button ID="btnGetNo" runat="server" Text="Genrate Product No#" formnovalidate class="btn btn-primary btn-block info" />
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-md-4">
-                    <label class="control-label" for="txtFName">FarmerName</label>
+                    <label class="control-label" for="txtProName">Product Name</label>
                 </div>
                 <div class="col-md-4">
-                    <asp:TextBox ID="txtFName" runat="server" class="form-control" required></asp:TextBox>
+                    <asp:TextBox ID="txtProName" runat="server" class="form-control" required></asp:TextBox>
                 </div>
             </div>
            <div class="form-group row">
                 <div class="col-md-4">
-                    <label class="control-label" for="txtPass">Password</label>
+                    <label class="control-label" for="txtProQuality">Product Quality</label>
                 </div>
                 <div class="col-md-4">
-                    <asp:TextBox ID="txtPass" runat="server" class="form-control" TextMode="Password" required></asp:TextBox>
+                    <asp:TextBox ID="txtProQuality" runat="server" class="form-control" required></asp:TextBox>                
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-md-4">
-                    <label class="control-label" for="txtAdd">Address</label>
+                    <label class="control-label" for="txtProDate">Sale Date</label>
                 </div>
                 <div class="col-md-4">
-                    <asp:TextBox ID="txtAdd" runat="server" class="form-control" required></asp:TextBox>
+                    <asp:TextBox ID="txtProDate" runat="server" class="form-control picker" required></asp:TextBox>
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-md-4">
-                    <label class="control-label" for="txtCity">City</label>
+                    <label class="control-label" for="txtReqID">Request ID</label>
                 </div>
                 <div class="col-md-4">
-                    <asp:TextBox ID="txtCity" runat="server" class="form-control" required></asp:TextBox>
+                    <asp:TextBox ID="txtReqID" runat="server" class="form-control" required></asp:TextBox>
                 </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-md-4">
-                    <label class="control-label" for="txtCNo">Contact No</label>
-                </div>
-                <div class="col-md-4">
-                    <asp:TextBox ID="txtCNo" runat="server" class="form-control" required></asp:TextBox>
-                </div>
-            </div>
-             <div class="form-group row">
-                <div class="col-md-4">
-                    <label class="control-label" for="txtEmailID">Email</label>
-                </div>
-                <div class="col-md-4">
-                    <asp:TextBox ID="txtEmailID" runat="server" class="form-control" required></asp:TextBox>
-                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmailID"
-                    ErrorMessage="Enter valid email" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
-                </div>
-            </div>
+            </div>          
             <div class="form-group row">
                 <div class="col-md-4">
                     <label class="control-label" for="txtRating">Rating</label>
@@ -81,7 +62,8 @@
             <div class="form-group row">
                  <div class="col-md-4 col-md-offset-4">                   
                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" class="btn btn-primary btn-sm"/>  
-                   <asp:Button ID="btnUpdate" runat="server" Text="Update" class="btn btn-primary btn-sm"/>                    
+                   <asp:Button ID="btnUpdate" runat="server" Text="Update" class="btn btn-primary btn-sm"/>  
+                   <asp:Button ID="btnDelete" runat="server" Text="Delete" class="btn btn-primary btn-sm"/>  
                 </div>
             </div>         
             <div class="row well well-sm">
@@ -99,6 +81,7 @@
                 <label id="updateSuccess" visible="false" runat="server">Data Successfully Updated.</label>              
                 <label id="searchMessage" visible="false" runat="server">Data not found!</label>
                 <label id="errorMessage" visible="false" runat="server">Operation Failed.</label>
+                <label id="deleteMessage" visible="false" runat="server">Data Successfully Deleted.</label>
             </div>
         </div>
     </div>

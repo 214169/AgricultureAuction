@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="MerchantLogin.aspx.vb" Inherits="AgricultreAuction.MerchantLogin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-     <div class="row" id="pagetitle">
+    <div class="row" id="pagetitle">
        <h1>Welcome To Merchant Login Page</h1>
    </div>
     <div class="row">

@@ -11,88 +11,61 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class FarmerSignup
+Partial Public Class Productonsale
     
     '''<summary>
-    '''txtFID control.
+    '''txtProOnSaleNo control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtFID As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtProOnSaleNo As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''btnGetNem control.
+    '''btnGetNo control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnGetNem As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnGetNo As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''txtFName control.
+    '''txtProName control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtFName As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtProName As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''txtPass control.
+    '''txtProQuality control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtPass As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtProQuality As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''txtAdd control.
+    '''txtProDate control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtAdd As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtProDate As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''txtCity control.
+    '''txtReqID control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtCity As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''txtCNo control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtCNo As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''txtEmailID control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtEmailID As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''RegularExpressionValidator1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents RegularExpressionValidator1 As Global.System.Web.UI.WebControls.RegularExpressionValidator
+    Protected WithEvents txtReqID As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''txtRating control.
@@ -129,6 +102,15 @@ Partial Public Class FarmerSignup
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnUpdate As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''btnDelete control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnDelete As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''txtSearch control.
@@ -183,4 +165,13 @@ Partial Public Class FarmerSignup
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents errorMessage As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    
+    '''<summary>
+    '''deleteMessage control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents deleteMessage As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 End Class

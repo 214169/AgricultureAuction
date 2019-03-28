@@ -11,16 +11,16 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class FarmerSignup
+Partial Public Class MerchantSignUp
     
     '''<summary>
-    '''txtFID control.
+    '''txtMID control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtFID As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtMID As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''btnGetNem control.
@@ -32,13 +32,13 @@ Partial Public Class FarmerSignup
     Protected WithEvents btnGetNem As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''txtFName control.
+    '''txtMName control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtFName As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtMName As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''txtPass control.

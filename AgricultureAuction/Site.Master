@@ -52,11 +52,8 @@
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Auction">Auction</a>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                        
-                           
-                        </li>
+                        <li><a runat="server" href="~/Auction">Auction</a> </li>
+                        <li><a runat="server" href="~/Contact">Contact</a></li>   
                     </ul>
                 </div>
             </div>
@@ -65,6 +62,9 @@
         <div class="container body-content">
             <div class="row">              
                 <img alt="" height="400" src="Content/images/musturd.jpg" style="width: 100%">
+                <div class="col-md-12 col-md-offset-10">
+                    <b>Welcome!</b>&nbsp;<label id="lblUserName" runat="server" style="color:orange"></label>
+                </div>
             </div>
             <br />
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
@@ -91,11 +91,7 @@
           $("#alert").fadeTo(2000, 1000).slideUp(1000, function(){
               $("#alert").slideUp(1000);
        });
-    </script>
-       
-
-
-
+    </script>  
     </form>
 </body>
 </html>
