@@ -20,7 +20,7 @@ Public Class FarmerLogin
                 If da(0) = txtPWD.Text Then
                     Session("fid") = txtFID.Text
                     Session("username") = da(1)
-                    Response.Redirect("salerqu.aspx", False)
+                    Response.Redirect("SaleRequest.aspx", False)
                 Else
                     LblErrMsg.Visible = True
                     LblErrMsg.Text = "Invalid Credentials!"

@@ -171,6 +171,7 @@
     <Content Include="Productonsale.aspx" />
     <Content Include="ProOnSaleView.aspx" />
     <Content Include="RequestView.aspx" />
+    <Content Include="SaleRequest.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -319,6 +320,13 @@
       <DependentUpon>RequestView.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="SaleRequest.aspx.designer.vb">
+      <DependentUpon>SaleRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SaleRequest.aspx.vb">
+      <DependentUpon>SaleRequest.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Site.Master.designer.vb">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
@@ -372,7 +380,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Content\images\Certificate\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
