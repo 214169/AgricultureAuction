@@ -8,22 +8,26 @@ Public Class FarmerLogin
     End Sub
 
     Protected Sub btnFarmerLogin_Click(sender As Object, e As EventArgs) Handles btnFarmerLogin.Click
-        Dim cmd As New SqlCommand("Select password from farmermst where farmerid=@farmerid", CommonProperty.cn)
+        Dim cmd As New SqlCommand("Select password, farmername from farmermst where farmerid=@farmerid", CommonProperty.cn)
         cmd.Parameters.AddWithValue("@farmerid", txtFID.Text)
         Try
             CommonProperty.cn.Open()
-            Dim obj As Object = cmd.ExecuteScalar()
-            If obj Is Nothing Then
-                LblErrMsg.Visible = True
-                LblErrMsg.Text = "Farmername is wrong "
-            Else
-                If obj.ToString() = txtPWD.Text Then
+            Dim da As SqlDataReader
+            da = cmd.ExecuteReader()
+
+            If da.HasRows Then
+                da.Read()
+                If da(0) = txtPWD.Text Then
                     Session("fid") = txtFID.Text
-                    Response.Redirect("salerqu.aspx")
+                    Session("username") = da(1)
+                    Response.Redirect("salerqu.aspx", False)
                 Else
                     LblErrMsg.Visible = True
-                    LblErrMsg.Text = "Password is wrong!!!"
+                    LblErrMsg.Text = "Invalid Credentials!"
                 End If
+            Else
+                LblErrMsg.Visible = True
+                LblErrMsg.Text = "Invalid Credentials!"
             End If
             CommonProperty.cn.Close()
         Catch ex As Exception

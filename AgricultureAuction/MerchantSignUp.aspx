@@ -1,29 +1,28 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="FarmerSignup.aspx.vb" 
-    Inherits="AgricultreAuction.FarmerSignup" MaintainScrollPositionOnPostBack = "true" %>
-
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="MerchantSignUp.aspx.vb"
+    Inherits="AgricultreAuction.MerchantSignUp" MaintainScrollPositionOnPostBack = "true"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="row" id="pagetitle">
-        <h1>Welcome To Farmer SignUp Page</h1>
+      <div class="row" id="pagetitle">
+        <h1>Welcome To Merchant SignUp Page</h1>
     </div>
     <div class="row">       
         <div class="col-md-12">
             <div class="form-group row">
                 <div class="col-md-4">
-                    <label class="control-label" for="txtFID">Farmer ID</label>
+                    <label class="control-label" for="txtMID">Merchant ID</label>
                 </div>
                 <div class="col-md-4">
-                    <asp:TextBox ID="txtFID" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtMID" runat="server" class="form-control"></asp:TextBox>
                 </div>
                 <div class="col-md-4">
-                    <asp:Button ID="btnGetNem" runat="server" Text="Genrate Farmer ID#" formnovalidate class="btn btn-primary btn-block info" />
+                    <asp:Button ID="btnGetNem" runat="server" Text="Genrate Merchant ID#" formnovalidate class="btn btn-primary btn-block info" />
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-md-4">
-                    <label class="control-label" for="txtFName">FarmerName</label>
+                    <label class="control-label" for="txtMName">Merchant Name</label>
                 </div>
                 <div class="col-md-4">
-                    <asp:TextBox ID="txtFName" runat="server" class="form-control" required></asp:TextBox>
+                    <asp:TextBox ID="txtMName" runat="server" class="form-control" required></asp:TextBox>
                 </div>
             </div>
            <div class="form-group row">

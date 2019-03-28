@@ -167,7 +167,10 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="MerchantLogin.aspx" />
+    <Content Include="MerchantSignUp.aspx" />
+    <Content Include="Productonsale.aspx" />
     <Content Include="ProOnSaleView.aspx" />
+    <Content Include="RequestView.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -269,6 +272,13 @@
       <DependentUpon>MerchantLogin.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="MerchantSignUp.aspx.designer.vb">
+      <DependentUpon>MerchantSignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MerchantSignUp.aspx.vb">
+      <DependentUpon>MerchantSignUp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -288,11 +298,25 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Productonsale.aspx.designer.vb">
+      <DependentUpon>Productonsale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Productonsale.aspx.vb">
+      <DependentUpon>Productonsale.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="ProOnSaleView.aspx.designer.vb">
       <DependentUpon>ProOnSaleView.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProOnSaleView.aspx.vb">
       <DependentUpon>ProOnSaleView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RequestView.aspx.designer.vb">
+      <DependentUpon>RequestView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestView.aspx.vb">
+      <DependentUpon>RequestView.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.vb">

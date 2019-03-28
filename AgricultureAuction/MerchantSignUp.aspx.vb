@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class FarmerSignup
+Public Class MerchantSignUp
     Inherits System.Web.UI.Page
     Dim cmd As New SqlCommand
 
@@ -8,15 +8,28 @@ Public Class FarmerSignup
 
     End Sub
 
+    Protected Sub btnGetNem_Click(sender As Object, e As EventArgs) Handles btnGetNem.Click
+        cmd.CommandText = "Select max(convert(int,merchantid))+1 from merchantmst"
+        CommonProperty.cn.Open()
+        cmd.Connection = CommonProperty.cn
+        Dim obj As Object = cmd.ExecuteScalar()
+        If obj Is DBNull.Value Then
+            txtMID.Text = "3001"
+        Else
+            txtMID.Text = obj.ToString()
+        End If
+        CommonProperty.cn.Close()
+    End Sub
+
     Protected Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
         CommonProperty.cn.Open()
         cmd.Connection = CommonProperty.cn
-        cmd.CommandText = "insert into FarmerMst values('" + txtFID.Text + "','" + txtFName.Text + "','" _
-                           + txtPass.Text + "','" + txtAdd.Text + "','" + txtCity.Text + "'," + txtCNo.Text + "," + txtCNo.Text + ",'" _
-                           + txtEmailID.Text + "'," + txtRating.Text + ")"
+        cmd.CommandText = "insert into MerchantMst values(" + txtMID.Text + ",'" + txtMName.Text + "','" _
+                           + txtPass.Text + "','" + txtAdd.Text + "','" + txtCity.Text + "'," + txtCNo.Text + "," _
+                           + txtCNo.Text + ",'" + txtEmailID.Text + "'," + txtRating.Text + ")"
         Try
             If cmd.ExecuteNonQuery() Then
-                Response.Redirect("farmerlogin.aspx", False)
+                Response.Redirect("MerchantLogin.aspx", False)
             Else
                 insertSuccess.Visible = False
                 updateSuccess.Visible = False
@@ -36,10 +49,9 @@ Public Class FarmerSignup
     Protected Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         CommonProperty.cn.Open()
         cmd.Connection = CommonProperty.cn
-        cmd.CommandText = "Update farmerMst set FarmerName='" + txtFName.Text + "',Password='" _
-                           + txtPass.Text + "',Address='" + txtAdd.Text + "',city='" + txtCity.Text + "',contactNo=" _
-                           + txtCNo.Text + ",EmailID='" + txtEmailID.Text + "',rating=" _
-                           + txtRating.Text + " where FarmerID='" + txtFID.Text + "'"
+        cmd.CommandText = "Update MerchantMst set MerchantName='" + txtMName.Text + "',Password='" + txtPass.Text + "',Address='" _
+                           + txtAdd.Text + "',city='" + txtCity.Text + "',contactNo=" + txtCNo.Text + ",MobileNo=" + txtCNo.Text _
+                           + ",EmailID='" + txtEmailID.Text + "',rating=" + txtRating.Text + " where MerchantID='" + txtMID.Text + "'"
         Try
             If cmd.ExecuteNonQuery() Then
                 insertSuccess.Visible = False
@@ -48,46 +60,28 @@ Public Class FarmerSignup
                 searchMessage.Visible = False
             Else
                 insertSuccess.Visible = False
-                updateSuccess.Visible = False
-                errorMessage.Visible = True
+                updateSuccess.Visible = True
+                errorMessage.Visible = False
                 searchMessage.Visible = False
             End If
         Catch ex As Exception
-            insertSuccess.Visible = False
-            updateSuccess.Visible = False
-            errorMessage.Visible = True
-            searchMessage.Visible = False
+
         End Try
         CommonProperty.cn.Close()
         cmd = Nothing
     End Sub
 
-    Protected Sub btnGetNem_Click(sender As Object, e As EventArgs) Handles btnGetNem.Click
-        cmd.CommandText = "Select max(convert(int,farmerid))+1 from farmermst"
-        cmd.Connection = CommonProperty.cn
-        cmd.Connection.Open()
-        Dim obj As Object = cmd.ExecuteScalar()
-        cmd.Connection.Close()
-        If obj Is DBNull.Value Then
-            txtFID.Text = "2001"
-        Else
-            txtFID.Text = obj.ToString()
-        End If
-    End Sub
-
     Protected Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         CommonProperty.cn.Open()
         cmd.Connection = CommonProperty.cn
-        RegularExpressionValidator1.Enabled = False
-        RangeValidator1.Enabled = False
-        cmd.CommandText = "Select * from FarmerMst where FarmerID=" + txtSearch.Text + ""
+        cmd.CommandText = "Select * from MerchantMst where MerchantID=" + txtSearch.Text + ""
         Dim da As SqlDataReader
         Try
             da = cmd.ExecuteReader()
             If da.HasRows Then
                 da.Read()
-                txtFID.Text = da(0)
-                txtFName.Text = da(1)
+                txtMID.Text = da(0)
+                txtMName.Text = da(1)
                 txtPass.Text = da(2)
                 txtAdd.Text = da(3)
                 txtCity.Text = da(4)

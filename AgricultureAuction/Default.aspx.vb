@@ -11,18 +11,22 @@ Public Class _Default
         Dim cmd As New SqlCommand("Select password from usermst where userid='" + txtUID.Text + "'", CommonProperty.cn)
         Try
             CommonProperty.cn.Open()
-            Dim obj As Object = cmd.ExecuteScalar()
-            If obj Is Nothing Then
-                LblErrMsg.Visible = True
-                LblErrMsg.Text = "Username is wrong "
-            Else
-                If obj.ToString() = txtPWD.Text Then
-                    Response.Redirect("auction.aspx", True)
+            Dim da As SqlDataReader
+            da = cmd.ExecuteReader()
+            If da.HasRows Then
+                da.Read()
+                If da(0) = txtPWD.Text Then
+                    Session("username") = txtUID.Text
+                    Response.Redirect("auction.aspx", False)
                 Else
                     LblErrMsg.Visible = True
-                    LblErrMsg.Text = "Password is wrong!!!"
+                    LblErrMsg.Text = "Invalid Credentials!"
                 End If
+            Else
+                LblErrMsg.Visible = True
+                LblErrMsg.Text = "Invalid Credentials!"
             End If
+
             CommonProperty.cn.Close()
         Catch ex As Exception
             CommonProperty.cn.Close()

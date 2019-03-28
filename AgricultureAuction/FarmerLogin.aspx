@@ -2,9 +2,9 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row" id="pagetitle">
-       <h1>Welcome To Farmer Login Page</h1>
-   </div>
-    <div class="row" >
+        <h1>Welcome To Farmer Login Page</h1>
+    </div>
+    <div class="row">
         <div class="col-md-8">
             <img src="Content\images\farmer_img.jpg" alt="Farmer" height="400" width="600">
         </div>
@@ -36,9 +36,9 @@
             </div>
             <div class="form-group row">
                 <div class="col-md-8">
-                    <a href="Default.aspx">Admin Login</a>  ::  <a href="MerchantLogin.aspx">Merchant Login</a> 
+                    <a href="Default.aspx">Admin Login</a>  ::  <a href="MerchantLogin.aspx">Merchant Login</a>
                 </div>
+            </div>
         </div>
     </div>
-        </div>
 </asp:Content>
