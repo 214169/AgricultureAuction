@@ -10,6 +10,8 @@ Public Class AuctionDetail
     Protected Sub GridView1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles GridView1.SelectedIndexChanged
         CommonProperty.aucno = GridView1.SelectedRow.Cells(1).Text
         txtAucNo.Text = CommonProperty.aucno
+        txtCond.Text = GridView1.SelectedRow.Cells(7).Text
+        txtDesc.Text = GridView1.SelectedRow.Cells(8).Text
         cmd.CommandText = "Select max(convert(int,Bid_no))+1 from Auction_Detail where auc_no=@Auc_no"
         cmd.Parameters.AddWithValue("@Auc_no", txtAucNo.Text)
         cmd.Connection = CommonProperty.cn
@@ -28,9 +30,9 @@ Public Class AuctionDetail
     Protected Sub btnsearch_Click(sender As Object, e As EventArgs) Handles btnsearch.Click
         CommonProperty.cn.Open()
         cmd.Connection = CommonProperty.cn
-        cmd.CommandText = "Select * from Auction_Detail where Auc_No=@Auc_no and Bide_No=@Bide_No"
+        cmd.CommandText = "Select * from Auction_Detail where Auc_No=@Auc_no and Bid_No=@Bid_No"
         cmd.Parameters.AddWithValue("@Auc_no", txtAucNo.Text)
-        cmd.Parameters.AddWithValue("@Bide_No", txtBidsearch.Text)
+        cmd.Parameters.AddWithValue("@Bid_No", txtBidsearch.Text)
         Dim da As SqlDataReader
         Try
             da = cmd.ExecuteReader()
