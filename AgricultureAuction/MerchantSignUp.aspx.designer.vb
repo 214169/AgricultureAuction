@@ -50,6 +50,24 @@ Partial Public Class MerchantSignUp
     Protected WithEvents txtPass As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
+    '''txtConfirmPass control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtConfirmPass As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''CompareValidator1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents CompareValidator1 As Global.System.Web.UI.WebControls.CompareValidator
+    
+    '''<summary>
     '''txtAdd control.
     '''</summary>
     '''<remarks>

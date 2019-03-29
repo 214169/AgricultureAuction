@@ -47,7 +47,7 @@
                     <label class="control-label" for="txtAucNo">Auction No</label>
                 </div>
                 <div class="col-md-4">
-                    <asp:TextBox ID="txtAucNo" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtAucNo" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
 
@@ -56,7 +56,7 @@
                     <label class="control-label" for="txtBidNo">Bid Number</label>
                 </div>
                 <div class="col-md-4">
-                    <asp:TextBox ID="txtBidNo" runat="server" class="form-control" required></asp:TextBox>
+                    <asp:TextBox ID="txtBidNo" runat="server" CssClass="form-control" required></asp:TextBox>
                 </div>
             </div>
 
@@ -65,7 +65,7 @@
                     <label class="control-label" for="txtDate">Date</label>
                 </div>
                 <div class="col-md-4">
-                    <asp:TextBox ID="txtDate" runat="server" class="form-control datepicker" ReadOnly="true"></asp:TextBox>
+                    <asp:TextBox ID="txtDate" runat="server" CssClass="form-control datepicker" ReadOnly="true"></asp:TextBox>
                 </div>
             </div>
 
@@ -74,7 +74,7 @@
                     <label class="control-label" for="txtBidRate">Bid Rate</label>
                 </div>
                 <div class="col-md-4">
-                    <asp:TextBox ID="txtBidRate" runat="server" class="form-control" required></asp:TextBox>
+                    <asp:TextBox ID="txtBidRate" runat="server" CssClass="form-control" required></asp:TextBox>
                 </div>
             </div>
 
@@ -83,7 +83,7 @@
                     <label class="control-label" for="Merchant_ID">Merchant ID</label>
                 </div>
                 <div class="col-md-4">
-                    <asp:TextBox ID="txtMID" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtMID" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
 
@@ -92,7 +92,7 @@
                     <label class="control-label" for="txtPlace">Place</label>
                 </div>
                 <div class="col-md-4">
-                    <asp:TextBox ID="txtPlace" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtPlace" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
 
@@ -101,16 +101,16 @@
                     <label class="control-label" for="Condition">Condition</label>
                 </div>
                 <div class="col-md-4">
-                    <asp:TextBox ID="txtCond" runat="server" class="form-control" required></asp:TextBox>
+                    <asp:TextBox ID="txtCond" runat="server" ReadOnly="true" CssClass="form-control" required></asp:TextBox>
                 </div>
             </div>
 
             <div class="form-group row">
                 <div class="col-md-4">
-                    <label class="control-label" for="Descripion">Descripion</label>
+                    <label class="control-label" for="Descripion">Description</label>
                 </div>
                 <div class="col-md-4">
-                    <asp:TextBox ID="txtDesc" runat="server" class="form-control" required></asp:TextBox>
+                    <asp:TextBox ID="txtDesc" runat="server" ReadOnly="true" CssClass="form-control" required></asp:TextBox>
                 </div>
             </div>
             <div class="form-group row">
@@ -119,12 +119,12 @@
                     <asp:Button ID="btnUPD" runat="server" Text="Update" class="btn btn-primary btn-sm" />                   
                 </div>
             </div>
-            <div class="alert alert-success" role="alert" id="alert">
-                <label id="insertSuccess" visible="false" runat="server">Data Successfully Inserted.</label>
-                <label id="updateSuccess" visible="false" runat="server">Data Successfully Updated.</label>
-                <label id="deleteSuccess" visible="false" runat="server">Data Successfully Updated.</label>
-                <label id="searchMessage" visible="false" runat="server">Data not found!</label>
-                <label id="errorMessage" visible="false" runat="server">Operation Failed.</label>
+            <div class="row" role="alert" id="alert">
+                <label id="insertSuccess" visible="false" class="alert alert-success col-md-12" runat="server">Data Successfully Inserted.</label>
+                <label id="updateSuccess" visible="false" class="alert alert-success col-md-12" runat="server">Data Successfully Updated.</label>
+                <label id="deleteSuccess" visible="false" class="alert alert-success col-md-12" runat="server">Data Successfully Updated.</label>
+                <label id="searchMessage" visible="false" class="alert alert-warning col-md-12" runat="server">Data not found!</label>
+                <label id="errorMessage" visible="false" class="alert alert-danger col-md-12" runat="server">Operation Failed!</label>
             </div>     
         </div>
     </div>

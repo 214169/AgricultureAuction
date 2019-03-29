@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="SaleRequest.aspx.vb" Inherits="AgricultreAuction.SaleRequest" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <div class="row" id="pagetitle">
-        <h1>Welcome To Farmer SignUp Page</h1>
+        <h1>Sale Request</h1>
     </div>
     <div class="row">       
         <div class="col-md-12">
@@ -109,12 +109,12 @@
                     </div>
                 </div>
             </div>
-              <div class="alert alert-success" role="alert" id="alert">
-                <label id="insertSuccess" visible="false" runat="server">Data Successfully Inserted.</label>
-                <label id="updateSuccess" visible="false" runat="server">Data Successfully Updated.</label>              
-                <label id="searchMessage" visible="false" runat="server">Data not found!</label>
-                <label id="errorMessage" visible="false" runat="server">Operation Failed.</label>
-                <label id="deleteMessage" visible="false" runat="server">Data  Successfully Deleted.</label>
+              <div role="alert" id="alert">
+                <label id="insertSuccess" visible="false" class="alert alert-success col-md-12" runat="server">Data Successfully Inserted.</label>
+                <label id="updateSuccess" visible="false" class="alert alert-success col-md-12" runat="server">Data Successfully Updated.</label>              
+                <label id="searchMessage" visible="false" class="alert alert-warning col-md-12" runat="server">Data not found!</label>
+                <label id="errorMessage" visible="false" class="alert alert-danger col-md-12" runat="server">Operation Failed!</label>
+                <label id="deleteMessage" visible="false" class="alert alert-warning col-md-12" runat="server">Data  Successfully Deleted.</label>
             </div>
         </div>
     </div>
