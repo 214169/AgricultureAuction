@@ -34,4 +34,8 @@ Public Class FarmerLogin
             CommonProperty.cn.Close()
         End Try
     End Sub
+
+    Protected Sub btnFarmerSignup_Click(sender As Object, e As EventArgs) Handles btnFarmerSignup.Click
+        Response.Redirect("FarmerSignUp.aspx")
+    End Sub
 End Class

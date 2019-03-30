@@ -29,8 +29,11 @@
             </div>
 
             <div class="form-group row">
-                <div class="col-md-8">
+                <div class="col-md-4">
                     <asp:Button ID="btnMerchantLogin" class="btn btn-primary btn-block info" runat="server" Text="Sign In" />
+                </div>
+                <div class="col-md-4">
+                    <asp:Button ID="btnMerchantSignup" class="btn btn-primary btn-block info" formnovalidate runat="server" Text="Sign Up" />
                 </div>
             </div>
              <div class="form-group row">

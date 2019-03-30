@@ -35,4 +35,8 @@ Public Class MerchantLogin
             CommonProperty.cn.Close()
         End Try
     End Sub
+
+    Protected Sub btnMerchantSignup_Click(sender As Object, e As EventArgs) Handles btnMerchantSignup.Click
+        Response.Redirect("MerchantSignUp.aspx")
+    End Sub
 End Class

@@ -48,4 +48,13 @@ Partial Public Class FarmerLogin
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnFarmerLogin As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''btnFarmerSignup control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnFarmerSignup As Global.System.Web.UI.WebControls.Button
 End Class
