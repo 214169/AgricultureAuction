@@ -29,7 +29,7 @@
         </div>
         <div class="col-md-12 col-md-offset-4">
 
-            <asp:Button ID="btnApprove" runat="server" Text="Approve" class="btn btn-primary btn-block info" />
+            <asp:Button ID="btnApprove" runat="server" Text="Forward Sale Request" class="btn btn-primary btn-block info" />
         </div>
     </div>
 
