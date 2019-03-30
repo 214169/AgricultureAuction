@@ -1,9 +1,9 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="SaleRequest.aspx.vb" Inherits="AgricultreAuction.SaleRequest" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <div class="row" id="pagetitle">
-        <h1>Sale Request</h1>
+        <h5><strong>Sale Request</strong></h5>
     </div>
-    <div class="row">       
+    <div class="row well">       
         <div class="col-md-12">
             <div class="form-group row">
                 <div class="col-md-4">
@@ -98,14 +98,14 @@
                    <asp:Button ID="btnDelete" runat="server" Text="Delete" class="btn btn-primary btn-sm"/>
                 </div>
             </div>         
-            <div class="row well well-sm">
+            <div class="row">
                 <div class="form-group ">
                     <div class="col-md-2 col-md-offset-8">
-                        <asp:TextBox ID="txtSearch" runat="server" class="form-control"></asp:TextBox>
+                        <asp:TextBox ID="txtSearch" runat="server" class="form-control" placeholder="Enter request id"></asp:TextBox>
                     </div>
                     <div class="col-md-2">
                         <asp:Button ID="btnSearch" runat="server" Text="Search" class="btn btn-primary btn-sm" formnovalidate />
-                        <asp:Button ID="btnShowSale" runat="server" Text="View Sale" class="btn btn-primary btn-sm" formnovalidate/>
+                        <asp:Button ID="btnShowSale" runat="server" Text="View Request" class="btn btn-primary btn-sm" formnovalidate/>
                     </div>
                 </div>
             </div>

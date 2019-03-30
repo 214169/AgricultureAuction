@@ -11,25 +11,25 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Auction
+Partial Public Class Bid
     
     '''<summary>
-    '''txtSearch control.
+    '''txtBidsearch control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtSearch As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtBidsearch As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''btnSearch control.
+    '''btnsearch control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnSearch As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnsearch As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''GridView1 control.
@@ -41,13 +41,13 @@ Partial Public Class Auction
     Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
     
     '''<summary>
-    '''dsProOnSaleForPutOnAuction control.
+    '''dsProductOnAuction control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents dsProOnSaleForPutOnAuction As Global.System.Web.UI.WebControls.SqlDataSource
+    Protected WithEvents dsProductOnAuction As Global.System.Web.UI.WebControls.SqlDataSource
     
     '''<summary>
     '''txtAucNo control.
@@ -59,58 +59,49 @@ Partial Public Class Auction
     Protected WithEvents txtAucNo As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''btnGetNem control.
+    '''txtBidNo control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnGetNem As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents txtBidNo As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''txtProOnSaleNo control.
+    '''txtDate control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtProOnSaleNo As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtDate As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''txtProName control.
+    '''txtBidRate control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtProName As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtBidRate As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''txtPrice control.
+    '''txtMID control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtPrice As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtMID As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''txtStDate control.
+    '''txtPlace control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtStDate As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''txtEdDate control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtEdDate As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtPlace As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''txtCond control.
@@ -147,15 +138,6 @@ Partial Public Class Auction
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnUPD As Global.System.Web.UI.WebControls.Button
-    
-    '''<summary>
-    '''btnDel control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnDel As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''insertSuccess control.

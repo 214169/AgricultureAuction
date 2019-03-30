@@ -1,10 +1,13 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class AuctionDetail
+Public Class Bid
     Inherits System.Web.UI.Page
+
     Dim cmd As New SqlCommand
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        txtMID.Text = Session("mid").ToString()
+        If Session("mid") <> "" Then
+            txtMID.Text = Session("mid").ToString()
+        End If
     End Sub
 
     Protected Sub GridView1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles GridView1.SelectedIndexChanged
@@ -12,7 +15,7 @@ Public Class AuctionDetail
         txtAucNo.Text = CommonProperty.aucno
         txtCond.Text = GridView1.SelectedRow.Cells(7).Text
         txtDesc.Text = GridView1.SelectedRow.Cells(8).Text
-        cmd.CommandText = "Select max(convert(int,Bid_no))+1 from Auction_Detail where auc_no=@Auc_no"
+        cmd.CommandText = "Select max(convert(int,Bid_no))+1 from Auction_Detail"
         cmd.Parameters.AddWithValue("@Auc_no", txtAucNo.Text)
         cmd.Connection = CommonProperty.cn
         cmd.Connection.Open()
@@ -30,8 +33,9 @@ Public Class AuctionDetail
     Protected Sub btnsearch_Click(sender As Object, e As EventArgs) Handles btnsearch.Click
         CommonProperty.cn.Open()
         cmd.Connection = CommonProperty.cn
-        cmd.CommandText = "Select * from Auction_Detail where Auc_No=@Auc_no and Bid_No=@Bid_No"
-        cmd.Parameters.AddWithValue("@Auc_no", txtAucNo.Text)
+        cmd.CommandText = "Select * from Auction_Detail where Bid_No=@Bid_No"
+        'cmd.CommandText = "Select * from Auction_Detail where Auc_No=@Auc_no and Bid_No=@Bid_No"
+        'cmd.Parameters.AddWithValue("@Auc_no", txtAucNo.Text)
         cmd.Parameters.AddWithValue("@Bid_No", txtBidsearch.Text)
         Dim da As SqlDataReader
         Try

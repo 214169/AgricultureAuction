@@ -3,10 +3,10 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row" id="pagetitle">
-        <h1>Welcome To Farmer SignUp Page</h1>
+        <h5><strong>Farmer SignUp</strong></h5>
     </div>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12  well well-sm">
             <div class="form-group row">
                 <div class="col-md-4">
                     <label class="control-label" for="txtFID">Farmer ID</label>
@@ -96,7 +96,7 @@
                     <asp:Button ID="btnUpdate" runat="server" Text="Update" class="btn btn-primary btn-sm" />
                 </div>
             </div>
-            <div class="row well well-sm">
+            <div class="row">
                 <div class="form-group">
                     <div class="col-md-2 col-md-offset-8">
                         <asp:TextBox ID="txtSearch" runat="server" class="form-control"></asp:TextBox>

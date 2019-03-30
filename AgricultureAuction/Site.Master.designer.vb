@@ -14,6 +14,51 @@ Option Explicit On
 Partial Public Class SiteMaster
     
     '''<summary>
+    '''aSaleRequest control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents aSaleRequest As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
+    '''aRequestView control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents aRequestView As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
+    '''aAddAuction control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents aAddAuction As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
+    '''aPlaceBid control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents aPlaceBid As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
+    '''spanWelcome control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents spanWelcome As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    
+    '''<summary>
     '''lblUserName control.
     '''</summary>
     '''<remarks>
@@ -21,6 +66,15 @@ Partial Public Class SiteMaster
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblUserName As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    
+    '''<summary>
+    '''lnkSignOut control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lnkSignOut As Global.System.Web.UI.WebControls.LinkButton
     
     '''<summary>
     '''MainContent control.

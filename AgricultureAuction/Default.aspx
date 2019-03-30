@@ -2,13 +2,13 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
    <div class="row">
-       <h1>Welcome To Agriculture Auction</h1>
+       <h4><strong>Welcome To Agriculture Auction</strong></h4>
    </div>
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-8" style="padding-left:0px">
             <img src="Content\images\home_equip.jpg" alt="agri" height="400" width="600">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 well well-sm">
             <div class="form-group row">
                 <div class="col-md-8">
                     <label class="control-label" for="UserID">UserID</label>

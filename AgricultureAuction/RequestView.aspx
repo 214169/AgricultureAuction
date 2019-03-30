@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row well">
         <div class="col-md-12">
-            <h1>Sale Request Manager</h1>
+            <h5><strong>Sale Request Manager</strong></h5>
             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False"
                 BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px"
                 CellPadding="3" DataKeyNames="ReqID" DataSourceID="dsRequest" ForeColor="Black"
@@ -25,11 +25,10 @@
             </asp:GridView>
 
             <asp:SqlDataSource ID="dsRequest" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
-                SelectCommand="SELECT [ReqID], [RquDate], [FarmerId], [ProName], [ProQuality], [Description] FROM [Sale_rqu_MST]"></asp:SqlDataSource>
+                SelectCommand="SELECT [ReqID], [RquDate], [FarmerId], [ProName], [ProQuality], [Description] FROM [Sale_rqu_MST] where farmerid=@fid"></asp:SqlDataSource>
         </div>
-        <div class="col-md-12 col-md-offset-4">
-
-            <asp:Button ID="btnApprove" runat="server" Text="Forward Sale Request" class="btn btn-primary btn-block info" />
+        <div class="col-md-12 col-md-offset-5">
+            <asp:Button ID="btnApprove" runat="server" Text="Forward Sale Request" Enabled="false" class="btn btn-primary info" />
         </div>
     </div>
 
