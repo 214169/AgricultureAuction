@@ -48,4 +48,13 @@ Partial Public Class MerchantLogin
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnMerchantLogin As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''btnMerchantSignup control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnMerchantSignup As Global.System.Web.UI.WebControls.Button
 End Class
