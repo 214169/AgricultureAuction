@@ -137,13 +137,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AddAuction.aspx" />
     <Content Include="App_Data\Auction.mdf" />
     <Content Include="App_Data\Auction_log.ldf">
       <DependentUpon>Auction.mdf</DependentUpon>
     </Content>
-    <Content Include="Auction.aspx" />
-    <Content Include="AuctionDetail.aspx" />
     <Content Include="AuctionView.aspx" />
+    <Content Include="Bid.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -166,6 +166,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="ManageBid.aspx" />
     <Content Include="MerchantLogin.aspx" />
     <Content Include="MerchantSignUp.aspx" />
     <Content Include="Productonsale.aspx" />
@@ -204,6 +205,13 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddAuction.aspx.designer.vb">
+      <DependentUpon>AddAuction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddAuction.aspx.vb">
+      <DependentUpon>AddAuction.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="App_Code\CommonProperty.vb" />
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
@@ -214,25 +222,18 @@
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Auction.aspx.designer.vb">
-      <DependentUpon>Auction.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Auction.aspx.vb">
-      <DependentUpon>Auction.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="AuctionDetail.aspx.designer.vb">
-      <DependentUpon>AuctionDetail.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AuctionDetail.aspx.vb">
-      <DependentUpon>AuctionDetail.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
     <Compile Include="AuctionView.aspx.designer.vb">
       <DependentUpon>AuctionView.aspx</DependentUpon>
     </Compile>
     <Compile Include="AuctionView.aspx.vb">
       <DependentUpon>AuctionView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Bid.aspx.designer.vb">
+      <DependentUpon>Bid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bid.aspx.vb">
+      <DependentUpon>Bid.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Contact.aspx.designer.vb">
@@ -265,6 +266,13 @@
     </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ManageBid.aspx.designer.vb">
+      <DependentUpon>ManageBid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageBid.aspx.vb">
+      <DependentUpon>ManageBid.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="MerchantLogin.aspx.designer.vb">
       <DependentUpon>MerchantLogin.aspx</DependentUpon>

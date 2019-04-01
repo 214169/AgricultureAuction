@@ -9,6 +9,7 @@ body {
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 /* Set widths on the form inputs since otherwise they're 100% wide */
@@ -27,3 +28,4 @@ textarea {
         padding: 0;
     }
 }
+

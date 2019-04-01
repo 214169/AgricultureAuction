@@ -1,11 +1,13 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class Auction
+Public Class AddAuction
     Inherits System.Web.UI.Page
 
     Dim cmd As New SqlCommand
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
+        If Session("admin") <> True Then
+            Response.Redirect("Default")
+        End If
     End Sub
 
     Protected Sub btnGetNem_Click(sender As Object, e As EventArgs) Handles btnGetNem.Click

@@ -1,10 +1,9 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Auction.aspx.vb" 
-    Inherits="AgricultreAuction.Auction" MaintainScrollPositionOnPostBack = "true" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">  
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="AddAuction.aspx.vb" Inherits="AgricultreAuction.AddAuction" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <div class="row well well-sm">
          <div class="form-group ">           
              <div class="col-md-2 col-md-offset-8">
-                    <asp:TextBox ID="txtSearch" runat="server" class="form-control"></asp:TextBox>
+                  <asp:TextBox ID="txtSearch" runat="server" class="form-control" placeholder="Enter auction id"></asp:TextBox>
                  </div>
                  <div class="col-md-2">
                     <asp:Button ID="btnSearch" runat="server" Text="Search" class="btn btn-primary btn-sm" formnovalidate/>

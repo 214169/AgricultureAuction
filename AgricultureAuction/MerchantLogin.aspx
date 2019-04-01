@@ -1,13 +1,10 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="MerchantLogin.aspx.vb" Inherits="AgricultreAuction.MerchantLogin" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="row" id="pagetitle">
-       <h1>Welcome To Merchant Login Page</h1>
-   </div>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">  
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-8"  style="padding-left:0px">
             <img src="Content\images\merchant.jpg" alt="Farmer" height="400" width="600">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4  well well-sm">
             <div class="form-group row">
                 <div class="col-md-8">
                     <label class="control-label" for="txtMID">Marchant ID</label>

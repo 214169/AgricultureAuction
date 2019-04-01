@@ -17,7 +17,8 @@ Public Class _Default
                 da.Read()
                 If da(0) = txtPWD.Text Then
                     Session("username") = txtUID.Text
-                    Response.Redirect("Auction.aspx", False)
+                    Session("admin") = True
+                    Response.Redirect("AddAuction", False)
                 Else
                     LblErrMsg.Visible = True
                     LblErrMsg.Text = "Invalid Credentials!"

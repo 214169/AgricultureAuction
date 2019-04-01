@@ -1,15 +1,12 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="FarmerLogin.aspx.vb" 
     Inherits="AgricultreAuction.FarmerLogin" MaintainScrollPositionOnPostback="true"%>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="row" id="pagetitle">
-        <h1>Welcome To Farmer Login Page</h1>
-    </div>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">   
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-8"  style="padding-left:0px">
             <img src="Content\images\farmer_img.jpg" alt="Farmer" height="400" width="600">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4  well well-sm">
             <div class="form-group row">
                 <div class="col-md-8">
                     <label class="control-label" for="txtFID">Farmer ID:</label>

@@ -16,7 +16,7 @@ Public Class FarmerSignup
                            + txtEmailID.Text + "'," + txtRating.Text + ")"
         Try
             If cmd.ExecuteNonQuery() Then
-                Response.Redirect("FarmerLogin.aspx", False)
+                Response.Redirect("FarmerLogin", False)
             Else
                 insertSuccess.Visible = False
                 updateSuccess.Visible = False

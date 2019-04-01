@@ -29,7 +29,7 @@ Public Class MerchantSignUp
                            + txtCNo.Text + ",'" + txtEmailID.Text + "'," + txtRating.Text + ")"
         Try
             If cmd.ExecuteNonQuery() Then
-                Response.Redirect("MerchantLogin.aspx", False)
+                Response.Redirect("MerchantLogin", False)
             Else
                 insertSuccess.Visible = False
                 updateSuccess.Visible = False

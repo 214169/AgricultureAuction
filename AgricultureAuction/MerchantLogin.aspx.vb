@@ -21,7 +21,7 @@ Public Class MerchantLogin
                 If da(0) = txtPWD.Text Then
                     Session("mid") = txtMID.Text
                     Session("username") = da(1)
-                    Response.Redirect("AuctionDetail.aspx", False)
+                    Response.Redirect("Bid", False)
                 Else
                     LblErrMsg.Visible = True
                     LblErrMsg.Text = "Invalid Credentials!"
@@ -37,6 +37,6 @@ Public Class MerchantLogin
     End Sub
 
     Protected Sub btnMerchantSignup_Click(sender As Object, e As EventArgs) Handles btnMerchantSignup.Click
-        Response.Redirect("MerchantSignUp.aspx")
+        Response.Redirect("MerchantSignUp")
     End Sub
 End Class

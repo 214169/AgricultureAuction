@@ -6,6 +6,7 @@ Public Class SaleRequest
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Page.IsPostBack = False Then
             txtFid.Text = Session("fid").ToString()
+
         End If
     End Sub
 
@@ -142,7 +143,7 @@ Public Class SaleRequest
     End Sub
 
     Protected Sub btnShowSale_Click(sender As Object, e As EventArgs) Handles btnShowSale.Click
-        Response.Redirect("RequestView.aspx")
+        Response.Redirect("RequestView")
     End Sub
 
     Protected Sub btnGetRequestNo_Click(sender As Object, e As EventArgs) Handles btnGetRequestNo.Click

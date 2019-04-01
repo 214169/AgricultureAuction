@@ -1,11 +1,9 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="AuctionDetail.aspx.vb" 
-    Inherits="AgricultreAuction.AuctionDetail"  MaintainScrollPositionOnPostBack = "true"%>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">   
-     <div class="row well well-sm">
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Bid.aspx.vb" Inherits="AgricultreAuction.Bid" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="row well well-sm">
              <div class="form-group ">                
                 <div class="col-md-2 col-md-offset-8">
-                    <asp:TextBox ID="txtBidsearch" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtBidsearch" runat="server" placeholder="Enter bid no" CssClass="form-control"></asp:TextBox>
                  </div>
                  <div class="col-md-2">
                     <asp:Button ID="btnsearch" runat="server" Text="Search" class="btn btn-primary btn-sm"/>
@@ -56,7 +54,7 @@
                     <label class="control-label" for="txtBidNo">Bid Number</label>
                 </div>
                 <div class="col-md-4">
-                    <asp:TextBox ID="txtBidNo" runat="server" CssClass="form-control" required></asp:TextBox>
+                    <asp:TextBox ID="txtBidNo" runat="server" CssClass="form-control" ReadOnly="true"  required></asp:TextBox>
                 </div>
             </div>
 
@@ -115,8 +113,8 @@
             </div>
             <div class="form-group row">
                 <div class="col-md-4 col-md-offset-4">
-                    <asp:Button ID="btnIns" runat="server" Text="Insert" class="btn btn-primary btn-sm" />
-                    <asp:Button ID="btnUPD" runat="server" Text="Update" class="btn btn-primary btn-sm" />                   
+                    <asp:Button ID="btnIns" runat="server" Text="Submit Bid" class="btn btn-primary btn-sm" />
+                    <asp:Button ID="btnUPD" runat="server" Text="Update Bid" class="btn btn-primary btn-sm" />                   
                 </div>
             </div>
             <div class="row" role="alert" id="alert">
@@ -128,4 +126,5 @@
             </div>     
         </div>
     </div>
+	
 </asp:Content>
