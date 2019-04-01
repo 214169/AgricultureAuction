@@ -66,7 +66,7 @@
         </div>
         <div class="container body-content">
             <div class="row">
-                <img alt="" height="400" src="Content/images/musturd.jpg" style="width: 100%">
+                <img alt="" height="300" src="Content/images/musturd.jpg" style="width: 100%">
                 <div class="pull-right">
                     <span id="spanWelcome" runat="server"><b><strong>Welcome!</strong></b></span>&nbsp;
                     <label id="lblUserName" runat="server" style="color: orange">Guest</label>

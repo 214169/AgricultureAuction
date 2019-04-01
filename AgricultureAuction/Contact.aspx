@@ -2,13 +2,13 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %></h2>
-    <p>Your contact page.</p>
+    <p>Our Office Address.</p>
 
     <address>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399<br />
+        Main Market<br />
+        Rudrapur, UK 263153<br />
         <abbr title="Phone">P:</abbr>
-        425.555.0100
+        1234 567 891
     </address>
 
     <address>
