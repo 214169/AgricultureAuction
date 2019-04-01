@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">  
     <div class="row">
         <div class="col-md-8"  style="padding-left:0px">
-            <img src="Content\images\merchant.jpg" alt="Farmer" height="400" width="600">
+            <img src="Content\images\merchant.jpg" alt="Farmer" height="300" width="600">
         </div>
         <div class="col-md-4  well well-sm">
             <div class="form-group row">
